@@ -128,11 +128,11 @@ Password: admintest123
 
 ### 4. Usage RabbitMQ Producer
  
-Has 2 ways usage RabbitMQ Producer: **RBSinglePoolPublisher** and **RBMapPoolPublisher**  
+Has 2 ways usage RabbitMQ Producer: **RBPoolPublisher** and **RBMapPoolPublisher**  
   
-#### 4.1. Code Template RBSinglePoolPublisher.  
+#### 4.1. Code Template RBPoolPublisher.  
  
-RBSinglePoolPublisher is Class Singleton Design Pattern contain pool Publisher.  
+RBPoolPublisher is Class Design Pattern contain pool Publisher.  
   
 ``` python
 import logging
@@ -163,9 +163,9 @@ if __name__ == '__main__':
   
 #### 4.2. Code Template RBMapPoolPublisher.
   
-RBMapPoolPublisher is Class contain dictionary of RBSinglePoolPublisher.  
-RBMapPoolPublisher management map RBSinglePoolPublisher  
-With Key=routing_key, Value=RBSinglePoolPublisher  
+RBMapPoolPublisher is Class contain dictionary of RBPoolPublisher.  
+RBMapPoolPublisher management map RBPoolPublisher  
+With Key=routing_key, Value=RBPoolPublisher  
   
 ``` python
 import logging
